@@ -1,0 +1,10 @@
+.navBar {
+  position: static;
+  bottom: auto;
+}
+
+.Logo {
+  height: 5%;
+  width: 5%;
+  pointer-events: none;
+}

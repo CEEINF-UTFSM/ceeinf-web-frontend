@@ -1,0 +1,19 @@
+.container {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    background-color:lightcyan;
+    text-align: center;
+    padding: 1%;
+  }
+
+.copyright {
+  color: #000;
+  text-align: center;
+}
+
+.FootLogo {
+  height: 3%;
+  width: 3%;
+  padding-right: 5px;
+}
