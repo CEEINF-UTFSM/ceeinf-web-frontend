@@ -17,11 +17,6 @@
       "type": "image/png",
       "sizes": "50x50"
     }
-    {
-      "src": "shalom.png",
-      "type": "image/png",
-      "sizes": "250x250"
-    }
   ],
   "start_url": ".",
   "display": "standalone",
