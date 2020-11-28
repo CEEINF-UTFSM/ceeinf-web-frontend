@@ -2,12 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Topnav from './Navbar';
-import Foot from './Footer'
+import Newscontainer from './Newscontainer';
+import Foot from './Footer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Topnav></Topnav>
+    <Newscontainer 
+    imagen="#"
+    titulo="Finalmente...."
+    cuerpo="aasdawas......asd"></Newscontainer>
+    <Newscontainer 
+    imagen="#"
+    titulo="Se descubre que..."
+    cuerpo="aasdawas......asd"></Newscontainer>
+    <Newscontainer 
+    imagen="#"
+    titulo="La real historia de..."
+    cuerpo="aasdawas......asd"></Newscontainer>
     <Foot></Foot>
   </React.StrictMode>,
   document.getElementById('root')
