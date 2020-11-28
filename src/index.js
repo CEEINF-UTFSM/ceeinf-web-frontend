@@ -5,7 +5,7 @@ import Topnav from './Navbar';
 import Newscontainer from './Newscontainer';
 import Foot from './Footer';
 import reportWebVitals from './reportWebVitals';
-
+ 
 ReactDOM.render(
   <React.StrictMode>
     <Topnav></Topnav>
