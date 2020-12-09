@@ -41,25 +41,37 @@ ReactDOM.render(
         
         <Route path="/noticias">
           <Container fluid>
-          <Newscontainer 
-            imagen="#"
-            titulo="Finalmente...."
-            cuerpo="aasdawas......asd">
-          </Newscontainer>
-          <Newscontainer 
-            imagen="#"
-            titulo="Se descubre que..."
-            cuerpo="aasdawas......asd">
-          </Newscontainer>
-          <Newscontainer 
-            imagen="#"
-            titulo="La real historia de..."
-            cuerpo="aasdawas......asd">
-          </Newscontainer>
+            <Newscontainer 
+              imagen="#"
+              titulo="Finalmente...."
+              cuerpo="aasdawas......asd">
+            </Newscontainer>
+            <Newscontainer 
+              imagen="#"
+              titulo="Se descubre que..."
+              cuerpo="aasdawas......asd">
+            </Newscontainer>
+            <Newscontainer 
+              imagen="#"
+              titulo="La real historia de..."
+              cuerpo="aasdawas......asd">
+            </Newscontainer>
           </Container>
         </Route>
 
         <Route path="/calendario">
+        </Route>
+
+        <Route path="/asambleas">
+        </Route>
+
+        <Route path="/tomaderamos">
+        </Route>
+
+        <Route path="/documentos">
+        </Route>
+
+        <Route path="/foro">
         </Route>
 
       </Switch>
