@@ -14,3 +14,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navBar {
+  position: static;
+  bottom: auto;
+}
+
+.Logo {
+  height: 5%;
+  width: 5%;
+  pointer-events: none;
+}
