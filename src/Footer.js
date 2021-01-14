@@ -13,7 +13,7 @@ function Foot() {
                     </a>
                 </div>
                 <div class="copyright">
-                    © 2020 Copyright: CEEINF
+                    © 2021 Copyright: CEEINF
                 </div>
             </div>
         </footer>

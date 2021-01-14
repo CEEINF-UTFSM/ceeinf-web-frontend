@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Topnav from './Navbar';
 import Newscontainer from './Newscontainer';
+import Calendar from './Calendario';
 import Foot from './Footer';
 import reportWebVitals from './reportWebVitals';
 
@@ -22,12 +22,12 @@ ReactDOM.render(
     <Router>
       <Navbar bg="light" expand="lg" className="navBar">
         <img src={"ceeinfLogo.png"} className="Logo" alt="ceeinf-logo"/>
-        <Navbar.Brand href="index.html">CEEINF</Navbar.Brand>
+        <Nav.Link as={Link} to="/noticias">CEEINF</Nav.Link> 
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
-            <Nav.Link as={Link} to="#" href="#">Calendario</Nav.Link>
+            <Nav.Link as={Link} to="/calendario">Calendario</Nav.Link>
             <Nav.Link as={Link} to="#" href="#">Asambleas</Nav.Link>
             <Nav.Link href="https://mallas.labcomp.cl/">Malla</Nav.Link>
             <Nav.Link as={Link} to="#" href="#">Toma de ramos</Nav.Link>
@@ -60,6 +60,9 @@ ReactDOM.render(
         </Route>
 
         <Route path="/calendario">
+          <Container fluid>
+            <Calendar></Calendar>
+          </Container>
         </Route>
 
         <Route path="/asambleas">

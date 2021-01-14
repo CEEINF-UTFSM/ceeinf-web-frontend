@@ -18,6 +18,7 @@ code {
 .navBar {
   position: static;
   bottom: auto;
+  color: black;
 }
 
 .Logo {
