@@ -6,6 +6,16 @@
       "src": "ceeinfLogo.png",
       "type": "image/png",
       "sizes": "200x200"
+    },
+    {
+      "src": "FbLogo.png",
+      "type": "image/png",
+      "sizes": "50x50"
+    },
+    {
+      "src": "IgLogo.png",
+      "type": "image/png",
+      "sizes": "50x50"
     }
   ],
   "start_url": ".",
