@@ -1,68 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Newscontainer from 'components/NewsContainer';
-import Calendar from 'pages/Calendario';
-import Foot from 'parts/Footer';
-import reportWebVitals from 'utils/reportWebVitals';
-
 import{
   BrowserRouter as Router,
   Switch,
   Route, 
-  Link
 } from 'react-router-dom';
 
-// import './Navbar.css';
+import Foot from 'parts/Footer';
+import Header from 'parts/Header';
+import Calendar from 'pages/Calendario';
+import Noticias from 'pages/Noticias';
+import reportWebVitals from 'utils/reportWebVitals';
+
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar, Nav, Container} from "react-bootstrap";
  
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Navbar bg="light" expand="lg" className="navBar">
-        <img src={"ceeinfLogo.png"} className="Logo" alt="ceeinf-logo"/>
-        <Nav.Link as={Link} to="/noticias">CEEINF</Nav.Link> 
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
-            <Nav.Link as={Link} to="/calendario">Calendario</Nav.Link>
-            <Nav.Link as={Link} to="#" href="#">Asambleas</Nav.Link>
-            <Nav.Link href="https://mallas.labcomp.cl/">Malla</Nav.Link>
-            <Nav.Link as={Link} to="#" href="#">Toma de ramos</Nav.Link>
-            <Nav.Link as={Link} to="#" href="#">Documentos</Nav.Link>
-            <Nav.Link as={Link} to="#" href="#">Foro</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <Header/>
       
       <Switch>
-        
         <Route path="/noticias">
-          <Container fluid>
-            <Newscontainer 
-              imagen="#"
-              titulo="Finalmente...."
-              cuerpo="aasdawas......asd">
-            </Newscontainer>
-            <Newscontainer 
-              imagen="#"
-              titulo="Se descubre que..."
-              cuerpo="aasdawas......asd">
-            </Newscontainer>
-            <Newscontainer 
-              imagen="#"
-              titulo="La real historia de..."
-              cuerpo="aasdawas......asd">
-            </Newscontainer>
-          </Container>
+          <Noticias/>
         </Route>
 
         <Route path="/calendario">
-          <Container fluid>
-            <Calendar></Calendar>
-          </Container>
+          <Calendar/>
         </Route>
 
         <Route path="/asambleas">
@@ -79,8 +43,8 @@ ReactDOM.render(
 
       </Switch>
 
-      <Foot></Foot>
     </Router>
+    <Foot/>
   </React.StrictMode>,
   document.getElementById('root')
 );
