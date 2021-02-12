@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Newscontainer from './Newscontainer';
-import Calendar from './Calendario';
-import Foot from './Footer';
-import reportWebVitals from './reportWebVitals';
+import Newscontainer from 'components/NewsContainer';
+import Calendar from 'pages/Calendario';
+import Foot from 'parts/Footer';
+import reportWebVitals from 'utils/reportWebVitals';
 
 import{
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ import{
   Link
 } from 'react-router-dom';
 
-import './Navbar.css';
+// import './Navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Nav, Container} from "react-bootstrap";
  
