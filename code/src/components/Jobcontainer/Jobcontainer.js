@@ -1,0 +1,22 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Card} from "react-bootstrap";
+import './Jobcontainer.css';
+
+function Jobcontainer (props) {
+    return (
+        <Card id='container'>
+            <Card.Body>
+                <p>{props.user}</p>
+                <Card.Img id='logo' src={props.logo} />
+                <Card.Title>{props.oferta} | {props.sueldo} </Card.Title>
+                <p>{props.ubicacion}</p>
+                <Card.Text>
+                    {props.descripcion}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+    );
+}
+
+export default Jobcontainer;

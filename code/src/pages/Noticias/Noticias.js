@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from "react-bootstrap";
 import Newscontainer from 'components/NewsContainer';
+import Jobcontainer from 'components/Jobcontainer';
 
 const Noticias = () => (
   <Container fluid>
@@ -13,6 +14,14 @@ const Noticias = () => (
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">
     </Newscontainer>
+    <Jobcontainer
+      user="FabLab USM SJ"
+      logo="https://upload.wikimedia.org/wikipedia/commons/d/d2/Fab_Lab_logo.svg"
+      oferta="Practica Desarrollador Front-End"
+      sueldo="$250.000/mes"
+      ubicacion="Santiago"
+      descripcion="">
+    </Jobcontainer>
   </Container>
 );
 

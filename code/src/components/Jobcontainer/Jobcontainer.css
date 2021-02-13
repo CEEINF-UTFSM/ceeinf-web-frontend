@@ -1,0 +1,9 @@
+#container {
+    width: 50%;
+    margin: 1% auto;
+    background-color:whitesmoke;
+}
+#logo {
+    width: 10%;
+    height: 10%;
+}
