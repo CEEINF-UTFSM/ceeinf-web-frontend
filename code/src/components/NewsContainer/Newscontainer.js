@@ -9,6 +9,7 @@ function Newscontainer (props) {
             <Card.Img id='image' variant="top" src={props.imagen} />
             <Card.Body>
                 <Card.Title>{props.titulo}</Card.Title>
+                <p>{props.fecha} | {props.user}</p>
                 <Card.Text>
                     {props.cuerpo}
                 </Card.Text>
