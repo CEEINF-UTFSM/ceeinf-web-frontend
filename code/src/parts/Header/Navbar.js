@@ -13,13 +13,12 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">
-          <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
+          <Nav.Link as={Link} to="/noticias">Social</Nav.Link>
           <Nav.Link as={Link} to="/calendario">Calendario</Nav.Link>
           <Nav.Link as={Link} to="#" href="#">Asambleas</Nav.Link>
           <Nav.Link href="https://mallas.labcomp.cl/">Malla</Nav.Link>
           <Nav.Link as={Link} to="#" href="#">Toma de ramos</Nav.Link>
           <Nav.Link as={Link} to="#" href="#">Documentos</Nav.Link>
-          <Nav.Link as={Link} to="#" href="#">Foro</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

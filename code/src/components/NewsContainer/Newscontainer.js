@@ -6,7 +6,7 @@ import './Newscontainer.css'
 function Newscontainer (props) {
     return (
         <Card id='container'>
-            <Card.Img variant="top" src={props.imagen} />
+            <Card.Img id='image' variant="top" src={props.imagen} />
             <Card.Body>
                 <Card.Title>{props.titulo}</Card.Title>
                 <Card.Text>
