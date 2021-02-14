@@ -7,10 +7,10 @@ function Jobcontainer (props) {
     return (
         <Card id='container'>
             <Card.Body>
-                <p>{props.user}</p>
+                <p id='user'>{props.user}</p>
                 <Card.Img id='logo' src={props.logo} />
-                <Card.Title>{props.oferta} | {props.sueldo} </Card.Title>
-                <p>{props.ubicacion}</p>
+                <Card.Title id='title'>{props.oferta} | {props.sueldo} </Card.Title>
+                <p id='ubi'>{props.ubicacion}</p>
                 <Card.Text>
                     {props.descripcion}
                 </Card.Text>
