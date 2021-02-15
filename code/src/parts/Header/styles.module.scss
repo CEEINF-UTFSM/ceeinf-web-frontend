@@ -1,0 +1,14 @@
+.account-bar {
+  background-color: black;
+  .account-info{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+.Logo {
+  height: 5%;
+  width: 5%;
+  pointer-events: none;
+}

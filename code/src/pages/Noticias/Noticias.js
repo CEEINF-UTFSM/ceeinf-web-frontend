@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import Newscontainer from 'components/NewsContainer';
 
 const Noticias = () => (
   <Container fluid>
+    <Button>Hola</Button>
     <Newscontainer 
       imagen="#"
       titulo="Finalmente...."
