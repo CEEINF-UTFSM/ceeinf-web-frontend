@@ -1,9 +1,23 @@
-.footer{
+.footer {
   background-color: #000;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
   // clear: both;
   // position: relative;
   // height: 200px;
   // margin-top: -200px;
+}
+
+.button-footer {
+  color: white !important;
+
+  &:hover {
+    color: red !important;
+  }
 }
 
 .copyright {
@@ -11,8 +25,19 @@
   text-align: center;
 }
 
+.col-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 4vw;
+  min-width: 50px;
+  pointer-events: none;
+}
+
 .icons {
-  height: 3%;
-  width: 3%;
+  width: 5%;
   padding-right: 5px;
 }

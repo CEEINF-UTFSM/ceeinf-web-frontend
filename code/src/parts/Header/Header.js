@@ -1,13 +1,24 @@
 import React from 'react';
 import{
-  Link
+  Link,
+  useLocation,
 } from 'react-router-dom';
 
 import { Navbar, Nav, Button } from "react-bootstrap";
+import { getSidebatPaths } from 'utils/routes';
 
 import styles from './styles.module.scss';
 
-function Header() {
+
+
+const Header = () => {
+  const { pathname } = useLocation();
+  const routes = getSidebatPaths();
+  
+  const isActual = (routeName) => {
+    return pathname.indexOf(routeName) === 0;
+  }
+
   return (
     <>
       <Navbar expand="lg" className={styles['account-bar']}>
@@ -16,32 +27,22 @@ function Header() {
         </div>
       </Navbar>
       <Navbar bg="light" expand="lg">
-        <img src={"ceeinfLogo.png"} className={styles.logo} alt="ceeinf-logo"/>
-        {/* <Nav.Link as={Link} to="/noticias">CEEINF</Nav.Link>  */}
+        <Nav.Link as={Link} to="">
+          <img src={"ceeinfLogo.png"} className={styles.logo} alt="ceeinf-logo"/>
+        </Nav.Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Button variant="primary">
-              <Nav.Link as={Link} to="/noticias">Noticias</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link as={Link} to="/calendario">Calendario</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link as={Link} to="#" href="#">Asambleas</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link href="https://mallas.labcomp.cl/">Malla</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link as={Link} to="#" href="#">Toma de ramos</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link as={Link} to="#" href="#">Documentos</Nav.Link>
-            </Button>
-            <Button variant="primary">
-              <Nav.Link as={Link} to="#" href="#">Foro</Nav.Link>
-            </Button>
+            {routes.map((props, key) => {
+              // TODO check user access
+              const { navbar, path } = props;
+              const variant = isActual(path) ? 'primary' : '';
+              return (
+                <Button variant={variant} key={navbar}>
+                  <Nav.Link as={Link} to={path}>{navbar}</Nav.Link>
+                </Button>
+              );
+            })}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

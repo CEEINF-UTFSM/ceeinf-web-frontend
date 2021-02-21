@@ -1,27 +1,61 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import{ useLocation } from 'react-router-dom';
 
-import FbLogo from 'assets/images/FbLogo.png';
-import IgLogo from 'assets/images/IgLogo.png';
+import {
+  Row,
+  Col,
+  Button,
+} from 'react-bootstrap';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import { getSidebatPaths } from 'utils/routes';
+
 import styles from './styles.module.scss';
 
-function Foot() {
+const Foot = () => {
+  const { pathname } = useLocation();
+  const routes = getSidebatPaths();
+  
+  const isActual = (routeName) => {
+    return pathname.indexOf(routeName) === 0;
+  }
+
   return(
-    <Navbar fixed="bottom" className={styles.footer}>
-      <div class="container">
-        <div>
-          <a href="https://www.facebook.com/ceeinf">
-            <img src={FbLogo} className={styles.icons} alt="fb-logo"/>
-          </a>
-          <a href="https://www.instagram.com/ceeinf_sj/?hl=es-la">
-            <img src={IgLogo} className={styles.icons} alt="ig-logo"/>
-          </a>
-        </div>
-        <div class="copyright">
+    <div className={styles.footer}>
+      <Row>
+        <Col>
+          {/* arriba izquierda */}
+          <img src={"ceeinfLogo.png"} className={styles.logo} alt="ceeinf-logo"/>
+        </Col>
+        <Col>
+          {routes.map((props, key) => {
+            // TODO check user access
+            const { navbar, path } = props;
+            const variant = isActual(path) ? 'primary' : '';
+            return (
+              <Button href={path} variant="" className={styles['button-footer']} >{navbar}</Button>
+            );
+          })}
+        </Col>
+        <Col className={styles['col-icons']}>
+          <Button variant="" href="https://www.instagram.com/ceeinf_sj/?hl=es-la">
+            <InstagramIcon/>
+          </Button>
+          <Button variant="" href="https://www.facebook.com/ceeinf">
+            <FacebookIcon/>
+          </Button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           © 2021 Copyright: CEEINF
-        </div>
-      </div>
-    </Navbar>
+        </Col>
+        <Col>
+        </Col>
+        <Col>
+        </Col>
+      </Row>
+    </div>
   );
 }
 

@@ -8,44 +8,31 @@ import{
 
 import Foot from 'parts/Footer';
 import Header from 'parts/Header';
-import Calendar from 'pages/Calendario';
-import Noticias from 'pages/Noticias';
 import reportWebVitals from 'utils/reportWebVitals';
+import { getRoutes } from 'utils/routes';
 
 // import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
+const routes = getRoutes();
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Header/>
-      
       <Switch>
-        <Route path="/noticias">
-          <Noticias/>
-        </Route>
-
-        <Route path="/calendario">
-          <Calendar/>
-        </Route>
-
-        <Route path="/asambleas">
-        </Route>
-
-        <Route path="/tomaderamos">
-        </Route>
-
-        <Route path="/documentos">
-        </Route>
-
-        <Route path="/foro">
-        </Route>
-
+        {routes.map((props, key) => {
+          const { path, component } = props;
+          return (
+            <Route path={path} key={path}>
+              {component}
+            </Route>
+          );
+        })}
       </Switch>
-
+      <Foot/>
     </Router>
-    <Foot/>
   </React.StrictMode>,
   document.getElementById('root')
 );
