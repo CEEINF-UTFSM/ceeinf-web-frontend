@@ -5,11 +5,14 @@ import{
   Switch,
   Route, 
 } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Foot from 'parts/Footer';
 import Header from 'parts/Header';
 import reportWebVitals from 'utils/reportWebVitals';
 import { getRoutes } from 'utils/routes';
+import theme from './theme';
 
 // import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,22 +21,25 @@ import './styles.css';
 const routes = getRoutes();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Header/>
-      <Switch>
-        {routes.map((props, key) => {
-          const { path, component } = props;
-          return (
-            <Route path={path} key={path}>
-              {component}
-            </Route>
-          );
-        })}
-      </Switch>
-      <Foot/>
-    </Router>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <React.StrictMode>
+      <Router>
+        <Header/>
+        <Switch>
+          {routes.map((props, key) => {
+            const { path, component } = props;
+            return (
+              <Route path={path} key={path}>
+                {component}
+              </Route>
+            );
+          })}
+        </Switch>
+        <Foot/>
+      </Router>
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
