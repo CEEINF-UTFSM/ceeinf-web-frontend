@@ -3,17 +3,43 @@
     margin: 1% auto;
     background-color:whitesmoke;
 }
+
 #user{
     margin-left: 15%;
 }
+
 #logo {
     width: 65px;
     height: 65px;
     position:absolute;
 }
-#title{
+
+#title {
     margin-left: 13%;
 }
-#ubi{
+
+#ubi {
     margin-left: 13%;
+}
+
+.collapsible {
+    background-color: #eee;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.contenido {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
 }
